@@ -11,7 +11,5 @@ namespace Revisao.Application.Interfaces
     {
        public IEnumerable<CartaViewModel> ObterTodos();
        Task Adicionar(NovaCartaViewModel novaCartaViewModel);
-       IEnumerable<CartaViewModel> ObterTodos();
-       public  void Adicionar(NovaCartaViewModel documentosCarta);
     }
 }
