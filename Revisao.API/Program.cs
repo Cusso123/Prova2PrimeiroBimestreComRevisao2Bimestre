@@ -23,29 +23,17 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-<<<<<<< HEAD
 builder.Services.AddAutoMapper(typeof(DomainToApplication), typeof(ApplicationToDomain));
-
 builder.Services.AddAutoMapper(typeof(DomainToCollection), typeof(CollectionToDomain));
-
 builder.Services.Configure<MongoDbSettings>(
     builder.Configuration.GetSection("MongoDbSettings"));
-
 builder.Services.AddSingleton<IMongoDbSettings>(serviceProvider =>
        serviceProvider.GetRequiredService<IOptions<MongoDbSettings>>().Value);
-
 builder.Services.AddScoped(typeof(IMongoRepository<>), typeof(MongoRepository<>));
-
-=======
-
 builder.Services.AddAutoMapper(typeof(DomainToApplication), typeof(ApplicationToDomain));
-
->>>>>>> 3c4a218d8bf1dcfb436e4e12daa51730a8a0a0a0
 builder.Services.AddScoped<ICartaRepository, CartaRepository>();
 builder.Services.AddScoped<ICartaService, CartaService>();
-
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
