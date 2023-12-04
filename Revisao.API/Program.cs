@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using Microsoft.Extensions.Options;
 using Revisao.Application.AutoMapper;
 using Revisao.Application.Interfaces;
@@ -6,6 +7,11 @@ using Revisao.Data.AutoMapper;
 using Revisao.Data.Providers.MongoDB.Configuration;
 using Revisao.Data.Providers.MongoDB.Interfaces;
 using Revisao.Data.Providers.MongoDB;
+=======
+using Revisao.Application.AutoMapper;
+using Revisao.Application.Interfaces;
+using Revisao.Application.Services;
+>>>>>>> 3c4a218d8bf1dcfb436e4e12daa51730a8a0a0a0
 using Revisao.Data.Repositories;
 using Revisao.Domain.Interfaces;
 
@@ -17,6 +23,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+<<<<<<< HEAD
 builder.Services.AddAutoMapper(typeof(DomainToApplication), typeof(ApplicationToDomain));
 
 builder.Services.AddAutoMapper(typeof(DomainToCollection), typeof(CollectionToDomain));
@@ -29,6 +36,11 @@ builder.Services.AddSingleton<IMongoDbSettings>(serviceProvider =>
 
 builder.Services.AddScoped(typeof(IMongoRepository<>), typeof(MongoRepository<>));
 
+=======
+
+builder.Services.AddAutoMapper(typeof(DomainToApplication), typeof(ApplicationToDomain));
+
+>>>>>>> 3c4a218d8bf1dcfb436e4e12daa51730a8a0a0a0
 builder.Services.AddScoped<ICartaRepository, CartaRepository>();
 builder.Services.AddScoped<ICartaService, CartaService>();
 

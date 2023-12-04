@@ -22,7 +22,11 @@ namespace Revisao.Application.Services
             _mapper = mapper;
         }
 
+<<<<<<< HEAD
         public async Task Adicionar(NovaCartaViewModel novaCartaViewModel)
+=======
+        public void Adicionar(NovaCartaViewModel novaCartaViewModel)
+>>>>>>> 3c4a218d8bf1dcfb436e4e12daa51730a8a0a0a0
         {
             var novaCarta = _mapper.Map<DocumentosCarta>(novaCartaViewModel);
             _cartaRepository.Adicionar(novaCarta);
